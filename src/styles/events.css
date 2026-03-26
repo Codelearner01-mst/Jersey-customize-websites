@@ -1,0 +1,86 @@
+/* ── EVENTS ── */
+#events {
+  margin-top: 3rem;
+  padding: 5rem 2.5rem;
+  background: var(--white);
+}
+
+.events-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--light-border);
+}
+
+.ev {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--white);
+  padding: 1.5rem 1.8rem;
+  transition: background 0.2s;
+}
+
+.ev:hover {
+  background: #f7f7f7;
+}
+
+.ev-date {
+  text-align: center;
+  border-right: 1px solid var(--light-border);
+  padding-right: 1.5rem;
+}
+
+.ev-date .d {
+  font-family: "Anton";
+  font-size: 2.4rem;
+  color: var(--green-bright);
+  line-height: 1;
+}
+
+.ev-date .m {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ev-info h3 {
+  font-family: "Anton";
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.ev-info p {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.ev-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border: 1.5px solid;
+  white-space: nowrap;
+}
+
+.pill-open {
+  border-color: var(--green-bright);
+  color: var(--green-bright);
+}
+
+.pill-soon {
+  border-color: #e09000;
+  color: #e09000;
+}
+
+.pill-done {
+  border-color: #bbb;
+  color: #bbb;
+}

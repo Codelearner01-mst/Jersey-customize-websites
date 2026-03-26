@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#home" class="logo">Stable <span>Sports</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="../../stable-sports (1).html" onclick="closeNav()">Home</a>
+        </li>
+        <li><a href="#services" onclick="closeNav()">Services</a></li>
+        <li><a href="#events" onclick="closeNav()">Events</a></li>
+        <li><a href="#about" onclick="closeNav()">About</a></li>
+        <li>
+          <a href="#contact" class="nav-wa" onclick="closeNav()">WhatsApp Us</a>
+        </li>
+      </ul>
+      <button
+        class="hamburger"
+        id="hamburger"
+        onclick="toggleNav()"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-inner">
+        <div class="about-left">
+          <p class="sec-label">Who We Are</p>
+          <h2>A Local Shop.<br />A Proper Service.</h2>
+          <p>
+            Stable Sports is a small, local football jersey customisation shop.
+            We're not a big factory — we're your neighbourhood print shop, and
+            we take pride in every jersey that goes out the door.
+          </p>
+          <p>
+            Whether you're a Sunday league player who wants their name on the
+            back, or a club manager ordering kits for the whole squad — we've
+            got you. Just come in, tell us what you need, and we'll sort it.
+          </p>
+          <div class="about-pills">
+            <span class="about-pill">⚽ Football Only</span>
+            <span class="about-pill">🏪 In-Store Collection</span>
+            <span class="about-pill">🤝 Local & Trusted</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="stat-box">
+            <span class="n">200+</span><span class="l">Teams Served</span>
+          </div>
+          <div class="stat-box">
+            <span class="n">5–7</span><span class="l">Day Turnaround</span>
+          </div>
+          <div class="stat-box">
+            <span class="n">100%</span><span class="l">Local Business</span>
+          </div>
+          <div class="stat-box">
+            <span class="n">Free</span><span class="l">Design Help</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="foot-logo">Stable <span>Sports</span></span>
+      <p>© 2025 Stable Sports. All rights reserved.</p>
+      <p style="color: #aaa">In-store collection · Osu, Accra</p>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        const nav = document.getElementById("navLinks");
+        const btn = document.getElementById("hamburger");
+        nav.classList.toggle("open");
+        btn.classList.toggle("active");
+      }
+
+      function closeNav() {
+        document.getElementById("navLinks").classList.remove("open");
+        document.getElementById("hamburger").classList.remove("active");
+      }
+    </script>
+  </body>
+</html>

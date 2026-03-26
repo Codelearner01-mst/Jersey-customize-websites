@@ -1,0 +1,48 @@
+/* ── SERVICES ── */
+#services {
+  margin-top: 3rem;
+  padding: 5rem 2.5rem;
+  background: var(--grey);
+  border-top: 1px solid var(--light-border);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1px;
+  background: var(--light-border);
+}
+
+.svc {
+  background: var(--white);
+  padding: 2rem 1.6rem;
+  border-top: 3px solid transparent;
+  transition:
+    border-color 0.25s,
+    background 0.25s;
+}
+
+.svc:hover {
+  border-color: var(--green-bright);
+  background: #f9f9f9;
+}
+
+.svc-icon {
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.svc h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.svc p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
