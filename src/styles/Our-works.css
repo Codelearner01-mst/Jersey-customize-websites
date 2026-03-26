@@ -1,0 +1,477 @@
+:root {
+  --green: #1a7a3c;
+  --green-bright: #22a050;
+  --white: #ffffff;
+  --dark: #111111;
+  --grey: #f0f0f0;
+  --light-border: #e0e0e0;
+  --text: #111111;
+  --muted: #777;
+  --epl: #3d195b;
+  --laliga: #ee8707;
+  --serie: #024494;
+  --bund: #d00027;
+  --ligue: #1a1a2e;
+  --ucl: #003087;
+}
+
+/* PAGE HEADER */
+.page-header {
+  padding: 8rem 2.5rem 3.5rem;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.page-header::after {
+  content: "WORKS";
+  position: absolute;
+  font-family: "Anton";
+  font-size: 22vw;
+  color: rgba(255, 255, 255, 0.03);
+  right: -1rem;
+  bottom: -2rem;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.page-header-inner {
+  position: relative;
+  z-index: 2;
+}
+.page-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.page-header h1 {
+  font-family: "Anton";
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+.page-header h1 span {
+  color: var(--green-bright);
+}
+.page-header p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.7;
+}
+.header-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.hstat {
+  border-left: 3px solid var(--green-bright);
+  padding-left: 1rem;
+}
+.hstat-num {
+  font-family: "Anton";
+  font-size: 2rem;
+  color: var(--white);
+  display: block;
+  line-height: 1;
+}
+.hstat-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+/* FILTER BAR */
+.filter-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--light-border);
+  position: sticky;
+  top: 66px;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.filter-inner {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 2.5rem;
+}
+.filter-inner::-webkit-scrollbar {
+  display: none;
+}
+.filter-btn {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 1rem 1.3rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.filter-btn:hover {
+  color: var(--text);
+}
+.filter-btn[data-filter="all"].active {
+  border-color: var(--green-bright);
+  color: var(--green-bright);
+}
+.filter-btn[data-filter="epl"].active {
+  border-color: var(--epl);
+  color: var(--epl);
+}
+.filter-btn[data-filter="laliga"].active {
+  border-color: var(--laliga);
+  color: var(--laliga);
+}
+.filter-btn[data-filter="seriea"].active {
+  border-color: var(--serie);
+  color: var(--serie);
+}
+.filter-btn[data-filter="bundesliga"].active {
+  border-color: var(--bund);
+  color: var(--bund);
+}
+.filter-btn[data-filter="ligue1"].active {
+  border-color: #555;
+  color: #333;
+}
+.filter-btn[data-filter="ucl"].active {
+  border-color: var(--ucl);
+  color: var(--ucl);
+}
+
+.league-pip {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.filter-count {
+  background: var(--grey);
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.12rem 0.42rem;
+  border-radius: 20px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.filter-btn.active .filter-count {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* RESULTS BAR */
+.results-bar {
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--light-border);
+}
+.results-count {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.results-count strong {
+  color: var(--text);
+  font-weight: 700;
+}
+.sort-select {
+  font-family: "DM Sans";
+  font-size: 0.8rem;
+  border: 1px solid var(--light-border);
+  padding: 0.4rem 0.8rem;
+  background: var(--white);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+
+/* WORKS GRID */
+.works-section {
+  padding: 2rem 2.5rem 5rem;
+}
+.works-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.work-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--grey);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.work-item.hidden {
+  display: none;
+}
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
+}
+.work-item:nth-child(3n + 1) {
+  aspect-ratio: 4/5;
+}
+.work-item:nth-child(3n + 2) {
+  aspect-ratio: 1/1;
+}
+.work-item:nth-child(3n + 3) {
+  aspect-ratio: 3/4;
+}
+.work-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition:
+    transform 0.5s ease,
+    filter 0.3s ease;
+  filter: brightness(0.93);
+}
+.work-item:hover .work-svg {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.2rem;
+}
+.work-item:hover .work-overlay {
+  opacity: 1;
+}
+.work-overlay-league {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.3rem;
+}
+.work-overlay-title {
+  font-family: "Anton";
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.work-overlay-tag {
+  display: inline-block;
+  background: var(--green-bright);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  width: fit-content;
+}
+.work-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(4px);
+  padding: 0.28rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 5rem 2rem;
+  grid-column: 1/-1;
+}
+.empty-state.visible {
+  display: block;
+}
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.empty-state h3 {
+  font-family: "Anton";
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.empty-state p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* CTA */
+.cta-band {
+  background: var(--green);
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.cta-band h2 {
+  font-family: "Anton";
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.cta-band p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+.cta-btn {
+  background: var(--white);
+  color: var(--green);
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  white-space: nowrap;
+}
+.cta-btn:hover {
+  background: #e8ffe8;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  border-top: 2px solid var(--green);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.foot-logo {
+  font-family: "Anton";
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.foot-logo span {
+  color: var(--green-bright);
+}
+footer p {
+  font-size: 0.78rem;
+  color: #888;
+}
+.foot-back {
+  font-size: 0.78rem;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.foot-back:hover {
+  color: var(--green-bright);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .works-masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem 1.2rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .page-header {
+    padding: 6rem 1.2rem 2.5rem;
+  }
+  .filter-inner {
+    padding: 0 1.2rem;
+  }
+  .results-bar,
+  .works-section {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .works-masonry {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cta-band {
+    padding: 2.5rem 1.2rem;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+  }
+}
