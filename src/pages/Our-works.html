@@ -17,23 +17,18 @@
       <a href="#home" class="logo">Stable <span>Sports</span></a>
       <ul class="nav-links" id="navLinks">
         <li>
-          <a href="../../index.html" onclick="closeNav()">Home</a>
+          <a href="../../index.html">Home</a>
         </li>
         <li>
-          <a href="#works-section" onclick="closeNav()">Works</a>
+          <a href="#works-section">Works</a>
         </li>
-        <li><a href="./services.html" onclick="closeNav()">Services</a></li>
-        <li><a href="./about.html" onclick="closeNav()">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./about.html">About</a></li>
         <li>
-          <a href="#contact" class="nav-wa" onclick="closeNav()">WhatsApp Us</a>
+          <a href="../../index.html#contact" class="nav-wa">WhatsApp Us</a>
         </li>
       </ul>
-      <button
-        class="hamburger"
-        id="hamburger"
-        onclick="toggleNav()"
-        aria-label="Toggle navigation"
-      >
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -210,18 +205,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      function toggleNav() {
-        const nav = document.getElementById("navLinks");
-        const btn = document.getElementById("hamburger");
-        nav.classList.toggle("open");
-        btn.classList.toggle("active");
-      }
-
-      function closeNav() {
-        document.getElementById("navLinks").classList.remove("open");
-        document.getElementById("hamburger").classList.remove("active");
-      }
-    </script>
   </body>
+  <script type="module" src="./works.js"></script>
 </html>
