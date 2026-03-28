@@ -55,6 +55,7 @@
   color: var(--white);
   line-height: 0.95;
   margin-bottom: 1rem;
+  animation: fadeUp 0.7s ease both;
 }
 .page-header h1 span {
   color: var(--green-bright);
@@ -65,12 +66,14 @@
   font-weight: 300;
   max-width: 500px;
   line-height: 1.7;
+  animation: fadeUp 0.7s 0.15s ease both;
 }
 .header-stats {
   display: flex;
   gap: 2.5rem;
   margin-top: 2.5rem;
   flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.28s ease both;
 }
 .hstat {
   border-left: 3px solid var(--green-bright);
@@ -110,6 +113,10 @@
 .filter-inner::-webkit-scrollbar {
   display: none;
 }
+.filter-tabs {
+  display: flex;
+  align-items: stretch;
+}
 .filter-btn {
   font-family: "DM Sans";
   font-weight: 700;
@@ -128,45 +135,14 @@
     border-color 0.2s;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
 }
 .filter-btn:hover {
   color: var(--text);
 }
-.filter-btn[data-filter="all"].active {
-  border-color: var(--green-bright);
+.filter-btn.active {
   color: var(--green-bright);
-}
-.filter-btn[data-filter="epl"].active {
-  border-color: var(--epl);
-  color: var(--epl);
-}
-.filter-btn[data-filter="laliga"].active {
-  border-color: var(--laliga);
-  color: var(--laliga);
-}
-.filter-btn[data-filter="seriea"].active {
-  border-color: var(--serie);
-  color: var(--serie);
-}
-.filter-btn[data-filter="bundesliga"].active {
-  border-color: var(--bund);
-  color: var(--bund);
-}
-.filter-btn[data-filter="ligue1"].active {
-  border-color: #555;
-  color: #333;
-}
-.filter-btn[data-filter="ucl"].active {
-  border-color: var(--ucl);
-  color: var(--ucl);
-}
-
-.league-pip {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
+  border-bottom-color: var(--green-bright);
 }
 .filter-count {
   background: var(--grey);
@@ -180,7 +156,7 @@
     color 0.2s;
 }
 .filter-btn.active .filter-count {
-  background: var(--dark);
+  background: var(--green-bright);
   color: #fff;
 }
 
@@ -215,123 +191,47 @@
 
 /* WORKS GRID */
 .works-section {
-  padding: 2rem 2.5rem 5rem;
+  padding: 2rem 1.5rem 5rem;
 }
-.works-masonry {
+
+/* Simple grid */
+.works-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  transition: opacity 0.3s ease;
 }
+
 .work-item {
   position: relative;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   background: var(--grey);
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
+
 .work-item.hidden {
   display: none;
 }
+
 .work-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.13);
 }
-.work-item:nth-child(3n + 1) {
-  aspect-ratio: 4/5;
-}
-.work-item:nth-child(3n + 2) {
-  aspect-ratio: 1/1;
-}
-.work-item:nth-child(3n + 3) {
-  aspect-ratio: 3/4;
-}
-.work-svg {
+
+.work-item img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
-  transition:
-    transform 0.5s ease,
-    filter 0.3s ease;
-  filter: brightness(0.93);
+  transition: transform 0.5s ease;
 }
-.work-item:hover .work-svg {
-  transform: scale(1.06);
-  filter: brightness(1);
-}
-.work-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0) 55%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.2rem;
-}
-.work-item:hover .work-overlay {
-  opacity: 1;
-}
-.work-overlay-league {
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 0.3rem;
-}
-.work-overlay-title {
-  font-family: "Anton";
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-}
-.work-overlay-tag {
-  display: inline-block;
-  background: var(--green-bright);
-  color: #fff;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
-  border-radius: 2px;
-  width: fit-content;
-}
-.work-badge {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  background: rgba(255, 255, 255, 0.93);
-  backdrop-filter: blur(4px);
-  padding: 0.28rem 0.6rem;
-  border-radius: 5px;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-.badge-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
+
+.work-item:hover img {
+  transform: scale(1.05);
 }
 
 /* EMPTY STATE */
@@ -440,8 +340,8 @@ footer p {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .works-masonry {
-    grid-template-columns: repeat(2, 1fr);
+  .works-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 @media (max-width: 600px) {
@@ -457,14 +357,12 @@ footer p {
   .filter-inner {
     padding: 0 1.2rem;
   }
-  .results-bar,
   .works-section {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding: 2rem 1.2rem 3rem;
   }
-  .works-masonry {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  .works-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.8rem;
   }
   .cta-band {
     padding: 2.5rem 1.2rem;
@@ -473,5 +371,16 @@ footer p {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 1.2rem;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

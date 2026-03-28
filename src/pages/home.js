@@ -14,11 +14,7 @@ function whatsappLink() {
 
 whatsAppBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const whatsappMessage = `Hello, I am interested in your services. Could you please provide more information?`;
-  window.open(
-    `https://wa.me/233247857046?text=${encodeURIComponent(whatsappMessage)}`,
-    "_blank",
-  );
+  whatsappLink();
 });
 
 hamburgerBtn.addEventListener("click", () => {

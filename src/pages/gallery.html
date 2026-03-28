@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Works — Stable Sports</title>
+    <title>Gallery</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/Our-works.css" />
+    <link rel="stylesheet" href="../styles/gallery.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
@@ -23,7 +23,7 @@
           <a href="./Our-works.html">Works</a>
         </li>
         <li><a href="./services.html">Services</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./gallery.html" class="active">Gallery</a></li>
         <li><a href="./about.html">About</a></li>
         <li>
           <a href="../../index.html#contact" class="nav-wa">WhatsApp Us</a>
@@ -36,147 +36,149 @@
       </button>
     </nav>
 
-    <!-- PAGE HEADER -->
-    <div class="page-header">
-      <div class="page-header-inner">
-        <span class="page-label">Stable Sports — Portfolio</span>
-        <h1>Our <span>Works</span></h1>
-        <p>
-          Custom jerseys inspired by the world's biggest leagues — printed
-          locally, worn proudly.
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-watermark">JERSEYS</div>
+      <div class="hero-inner">
+        <div class="hero-tag">Available Jersey Designs</div>
+        <h1>Custom <em>Jersey</em> Gallery</h1>
+        <p class="hero-desc">
+          Browse our collection of custom jersey designs. Choose from popular
+          league styles including Premier League, La Liga, Serie A, and more.
         </p>
-        <div class="header-stats">
-          <div class="hstat">
-            <span class="hstat-num">200+</span
-            ><span class="hstat-label">Kits Printed</span>
+        <div class="hero-meta">
+          <div class="hero-count" id="hero-total">
+            16 <span>Jersey Designs</span>
           </div>
-          <div class="hstat">
-            <span class="hstat-num">6</span
-            ><span class="hstat-label">Leagues</span>
-          </div>
-          <div class="hstat">
-            <span class="hstat-num">100%</span
-            ><span class="hstat-label">Custom Made</span>
-          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-count">4 <span>Leagues</span></div>
         </div>
       </div>
     </div>
 
     <!-- FILTER BAR -->
-    <div class="filter-section">
+    <div class="filter-bar">
       <div class="filter-inner">
         <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">
-            All Works <span class="filter-count">12</span>
+          <button class="ftab active" data-filter="all">
+            All <span class="fcount" id="fc-all">16</span>
           </button>
-          <button class="filter-btn" data-filter="premier-league">
-            Premier League <span class="filter-count">3</span>
+          <button class="ftab" data-filter="premier-league">
+            Premier League <span class="fcount" id="fc-premier-league">4</span>
           </button>
-          <button class="filter-btn" data-filter="laliga">
-            La Liga <span class="filter-count">3</span>
+          <button class="ftab" data-filter="laliga">
+            La Liga <span class="fcount" id="fc-laliga">4</span>
           </button>
-          <button class="filter-btn" data-filter="serie-a">
-            Serie A <span class="filter-count">3</span>
+          <button class="ftab" data-filter="serie-a">
+            Serie A <span class="fcount" id="fc-serie-a">4</span>
           </button>
-          <button class="filter-btn" data-filter="bundesliga">
-            Bundesliga <span class="filter-count">3</span>
+          <button class="ftab" data-filter="bundesliga">
+            Bundesliga <span class="fcount" id="fc-bundesliga">4</span>
           </button>
+        </div>
+        <div class="view-toggle">
+          <button class="vbtn active" id="btn-grid" title="Grid view">⊞</button>
+          <button class="vbtn" id="btn-list" title="List view">☰</button>
         </div>
       </div>
     </div>
 
-    <!-- WORKS GRID -->
-    <div class="works-section">
-      <div class="works-grid" id="works-grid">
-        <div class="work-item" data-cat="premier-league">
+    <!-- GALLERY -->
+    <div class="gallery-section">
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" data-cat="premier-league">
           <img
             src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Custom Jersey"
+            alt="Premier League Jersey"
           />
         </div>
 
-        <div class="work-item" data-cat="laliga">
-          <img
-            src="../images/IMG-20260325-WA0042.jpg"
-            alt="La Liga Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="laliga">
+          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
         </div>
 
-        <div class="work-item" data-cat="serie-a">
-          <img
-            src="../images/IMG-20260325-WA0056.jpg"
-            alt="Serie A Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="serie-a">
+          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
         </div>
 
-        <div class="work-item" data-cat="bundesliga">
+        <div class="gallery-item" data-cat="bundesliga">
           <img
             src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Custom Jersey"
+            alt="Bundesliga Jersey"
           />
         </div>
 
-        <div class="work-item" data-cat="premier-league">
+        <div class="gallery-item" data-cat="premier-league">
           <img
             src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Custom Jersey"
+            alt="Premier League Jersey"
           />
         </div>
 
-        <div class="work-item" data-cat="laliga">
-          <img
-            src="../images/IMG-20260325-WA0042.jpg"
-            alt="La Liga Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="laliga">
+          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
         </div>
 
-        <div class="work-item" data-cat="serie-a">
-          <img
-            src="../images/IMG-20260325-WA0056.jpg"
-            alt="Serie A Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="serie-a">
+          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
         </div>
 
-        <div class="work-item" data-cat="bundesliga">
+        <div class="gallery-item" data-cat="bundesliga">
           <img
             src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Custom Jersey"
+            alt="Bundesliga Jersey"
           />
         </div>
 
-        <div class="work-item" data-cat="premier-league">
+        <div class="gallery-item" data-cat="premier-league">
           <img
             src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Custom Jersey"
+            alt="Premier League Jersey"
           />
         </div>
 
-        <div class="work-item" data-cat="laliga">
-          <img
-            src="../images/IMG-20260325-WA0042.jpg"
-            alt="La Liga Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="laliga">
+          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
         </div>
 
-        <div class="work-item" data-cat="serie-a">
-          <img
-            src="../images/IMG-20260325-WA0056.jpg"
-            alt="Serie A Custom Jersey"
-          />
+        <div class="gallery-item" data-cat="serie-a">
+          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
         </div>
 
-        <div class="work-item" data-cat="bundesliga">
+        <div class="gallery-item" data-cat="bundesliga">
           <img
             src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Custom Jersey"
+            alt="Bundesliga Jersey"
+          />
+        </div>
+
+        <div class="gallery-item" data-cat="premier-league">
+          <img
+            src="../images/IMG-20260325-WA0057.jpg"
+            alt="Premier League Jersey"
+          />
+        </div>
+
+        <div class="gallery-item" data-cat="laliga">
+          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
+        </div>
+
+        <div class="gallery-item" data-cat="serie-a">
+          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
+        </div>
+
+        <div class="gallery-item" data-cat="bundesliga">
+          <img
+            src="../images/IMG-20260325-WA0048.jpg"
+            alt="Bundesliga Jersey"
           />
         </div>
 
         <!-- empty state -->
-        <div class="empty-state" id="empty-state">
-          <div class="empty-icon">🔍</div>
-          <h3>No Works Yet</h3>
-          <p>We're still adding works for this league — check back soon!</p>
+        <div class="gallery-empty" id="gallery-empty">
+          <div style="font-size: 3rem">📷</div>
+          <h3>No Photos Here Yet</h3>
+          <p>Check back soon — we're always adding new shots.</p>
         </div>
       </div>
     </div>
@@ -184,10 +186,10 @@
     <!-- CTA -->
     <div class="cta-band">
       <div>
-        <h2>Want a Kit Like These?</h2>
-        <p>Come in-store or WhatsApp us to start your custom order.</p>
+        <h2>Want Your Jersey in Here?</h2>
+        <p>Place your order in-store and we'll feature your kit.</p>
       </div>
-      <a href="../../index.html#contact" class="cta-btn">Get a Quote →</a>
+      <a href="../../index.html#contact" class="cta-btn">Order Now →</a>
     </div>
 
     <!-- FOOTER -->
@@ -218,7 +220,7 @@
             <li><a href="../../index.html">Home</a></li>
             <li><a href="./services.html">Services</a></li>
             <li><a href="./Our-works.html">Our Works</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
+
             <li><a href="./about.html">About Us</a></li>
             <li><a href="../../index.html#contact">Contact</a></li>
           </ul>
@@ -259,5 +261,5 @@
       </div>
     </footer>
   </body>
-  <script src="./works.js"></script>
+  <script src="../scripts/gallery.js"></script>
 </html>
