@@ -59,7 +59,7 @@
     <!-- FILTER BAR -->
     <div class="filter-bar">
       <div class="filter-inner">
-        <div class="filter-tabs">
+        <div class="filter-tabs" id="filter-tabs">
           <button class="ftab active" data-filter="all">
             All <span class="fcount" id="fc-all">16</span>
           </button>
@@ -75,6 +75,9 @@
           <button class="ftab" data-filter="bundesliga">
             Bundesliga <span class="fcount" id="fc-bundesliga">4</span>
           </button>
+          <button class="ftab" data-filter="other">
+            Other <span class="fcount" id="fc-other">6</span>
+          </button>
         </div>
         <div class="view-toggle">
           <button class="vbtn active" id="btn-grid" title="Grid view">⊞</button>
@@ -85,101 +88,11 @@
 
     <!-- GALLERY -->
     <div class="gallery-section">
-      <div class="gallery-grid" id="gallery-grid">
-        <div class="gallery-item" data-cat="premier-league">
-          <img
-            src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="laliga">
-          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="serie-a">
-          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="bundesliga">
-          <img
-            src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="premier-league">
-          <img
-            src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="laliga">
-          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="serie-a">
-          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="bundesliga">
-          <img
-            src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="premier-league">
-          <img
-            src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="laliga">
-          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="serie-a">
-          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="bundesliga">
-          <img
-            src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="premier-league">
-          <img
-            src="../images/IMG-20260325-WA0057.jpg"
-            alt="Premier League Jersey"
-          />
-        </div>
-
-        <div class="gallery-item" data-cat="laliga">
-          <img src="../images/IMG-20260325-WA0042.jpg" alt="La Liga Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="serie-a">
-          <img src="../images/IMG-20260325-WA0056.jpg" alt="Serie A Jersey" />
-        </div>
-
-        <div class="gallery-item" data-cat="bundesliga">
-          <img
-            src="../images/IMG-20260325-WA0048.jpg"
-            alt="Bundesliga Jersey"
-          />
-        </div>
-
-        <!-- empty state -->
-        <div class="gallery-empty" id="gallery-empty">
-          <div style="font-size: 3rem">📷</div>
-          <h3>No Photos Here Yet</h3>
-          <p>Check back soon — we're always adding new shots.</p>
-        </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <!-- empty state -->
+      <div class="gallery-empty" id="gallery-empty">
+        <h3>Sorry, No Jerseys in this Category</h3>
+        <p>Check back soon — we're always adding new shots.</p>
       </div>
     </div>
 
