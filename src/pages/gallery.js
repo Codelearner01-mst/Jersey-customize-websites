@@ -17,6 +17,9 @@ let prevActiveTab = filterTabs.querySelector(".active");
 
 filterTabs.addEventListener("click", (e) => {
   const activeTab = e.target.closest("button");
+  prevActiveTab.classList.remove("active");
+  activeTab.classList.add("active");
+  prevActiveTab = activeTab;
   const leagueCat = activeTab.dataset.filter.replace("-", " ");
   const filteredJerseys = filterJerseysByLeague(leagueCat);
 
