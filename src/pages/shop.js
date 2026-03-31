@@ -4,9 +4,9 @@ import { filterJerseysByLeague } from "../utils/filter.js";
 import { createJerseyItem } from "../components/jerseyItem.js";
 import { jerseyStore } from "../utils/store.js";
 
-const jerseyGrid = document.getElementById("gallery-grid");
+const jerseyGrid = document.getElementById("shop-grid");
 const filterTabs = document.getElementById("filter-tabs");
-const emptyState = document.getElementById("gallery-empty");
+const emptyState = document.getElementById("shop-empty");
 
 for (const jersey of jerseyStore) {
   const jerseyItem = createJerseyItem(jersey);

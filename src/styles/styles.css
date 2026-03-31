@@ -412,19 +412,22 @@ h1 .line-green {
   pointer-events: none;
 }
 
-.works-grid {
+.works-grid,
+.shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
-  max-width: 1200px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.work-card {
+.work-card,
+.work-item,
+.shop-item {
   position: relative;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   background: var(--grey);
   cursor: pointer;
@@ -432,6 +435,7 @@ h1 .line-green {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   aspect-ratio: 4/5;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 95%;
 }
 
 .work-card:hover {
@@ -445,6 +449,7 @@ h1 .line-green {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 4px;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -1022,8 +1027,13 @@ footer {
     gap: 1rem;
   }
 
-  .work-card {
-    aspect-ratio: 1/1;
+  .work-card,
+  .work-item,
+  .shop-item {
+    aspect-ratio: 2/2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
   .photo-strip {

@@ -282,31 +282,31 @@
 }
 
 /* ── GALLERY GRID ── */
-.gallery-section {
+.shop-section {
   padding: 2rem 1.5rem 5rem;
 }
 
 /* Simple grid */
-.gallery-grid {
+.shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
   transition: opacity 0.3s ease;
 }
 
-.gallery-grid.list-view {
+.shop-grid.list-view {
   grid-template-columns: 1fr;
   grid-auto-rows: 120px;
 }
 
-.gallery-grid.list-view .gallery-item {
+.shop-grid.list-view .gallery-item {
   grid-column: span 1 !important;
   grid-row: span 1 !important;
   border-radius: 8px;
 }
 
 /* Simple gallery items - just images */
-.gallery-item {
+.shop-item {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -317,12 +317,12 @@
     box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
+.shop-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.13);
 }
 
-.gallery-item img {
+.shop-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -330,33 +330,33 @@
   transition: transform 0.5s ease;
 }
 
-.gallery-item:hover img {
+.shop-item:hover img {
   transform: scale(1.05);
 }
 
 /* hidden state */
-.gallery-item.hidden {
+.shop-item.hidden {
   display: none;
 }
 
 /* empty */
-.gallery-empty {
+.shop-empty {
   display: none;
   grid-column: 1/-1;
   text-align: center;
   padding: 5rem 2rem;
 }
-.gallery-empty.show {
+.shop-empty.show {
   display: block;
 }
-.gallery-empty h3 {
+.shop-empty h3 {
   font-family: "Anton";
   font-size: 2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 1rem 0 0.5rem;
 }
-.gallery-empty p {
+.shop-empty p {
   color: var(--muted);
 }
 
@@ -571,11 +571,11 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .gallery-section {
+  .shop-section {
     padding: 2rem 1.2rem 3rem;
   }
 
-  .gallery-grid {
+  .shop-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 0.8rem;
   }
