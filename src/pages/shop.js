@@ -8,6 +8,8 @@ const jerseyGrid = document.getElementById("shop-grid");
 const filterTabs = document.getElementById("filter-tabs");
 const emptyState = document.getElementById("shop-empty");
 
+console.log(jerseyStore);
+
 for (const jersey of jerseyStore) {
   const jerseyItem = createJerseyItem(jersey);
   jerseyGrid.appendChild(jerseyItem);

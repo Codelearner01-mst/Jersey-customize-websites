@@ -1,9 +1,9 @@
 export const jerseyStore = [
   {
     id: 0,
-    league: "other",
-    team: "other",
-    image: "../images/IMG-20260325-WA0057.jpg",
+    league: "premier league",
+    team: "chelsea",
+    image: "../images/Jersey-images/IMG-20260325-WA0044.jpg",
   },
   {
     id: 1,
@@ -14,8 +14,8 @@ export const jerseyStore = [
   {
     id: 2,
     league: "laliga",
-    team: "real madrid",
-    image: "../images/IMG-20260325-WA0056.jpg",
+    team: "Barcelona",
+    image: "../images/Jersey-images/IMG-20260325-WA0041.jpg",
   },
   {
     id: 3,
@@ -25,32 +25,44 @@ export const jerseyStore = [
   },
   {
     id: 4,
-    league: "other",
-    team: "other",
-    image: "../images/IMG-20260325-WA0048.jpg",
+    league: "premier league",
+    team: "chelsea",
+    image: "../images/Jersey-images/IMG-20260325-WA0055.jpg",
   },
   {
     id: 5,
-    league: "other",
-    team: "other",
-    image: "../images/IMG-20260325-WA0057.jpg",
+    league: "premier league",
+    team: "Manchester city",
+    image: "../images/Jersey-images/IMG-20260325-WA0059.jpg",
   },
   {
     id: 6,
-    league: "laliga",
-    team: "real madrid",
-    image: "../images/IMG-20260325-WA0056.jpg",
+    league: "other",
+    team: "other",
+    image: "../images/Jersey-images/IMG-20260325-WA0035.jpg",
   },
   {
     id: 7,
     league: "other",
     team: "other",
-    image: "../images/IMG-20260325-WA0042.jpg",
+    image: "../images/Jersey-images/IMG-20260325-WA0034.jpg",
   },
   {
     id: 8,
-    league: "other",
-    team: "other",
-    image: "../images/IMG-20260325-WA0057.jpg",
+    league: "premier league",
+    team: "manchester united",
+    image: "../images/Jersey-images/IMG-20260325-WA0046.jpg",
+  },
+  {
+    id: 9,
+    league: "premier league",
+    team: "arsenal",
+    image: "../images/Jersey-images/IMG-20260325-WA0065.jpg",
+  },
+  {
+    id: 10,
+    league: "bundesliga",
+    team: "koln",
+    image: "../images/Jersey-images/IMG-20260325-WA0058.jpg",
   },
 ];
