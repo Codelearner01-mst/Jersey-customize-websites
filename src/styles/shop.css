@@ -557,7 +557,7 @@
   text-transform: uppercase;
   padding: 0.9rem 2rem;
   border: none;
-  cursor: none;
+  cursor: pointer;
   text-decoration: none;
   display: inline-block;
   transition:
