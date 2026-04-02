@@ -12,10 +12,10 @@
 
 /* ── ABOUT ── */
 #about {
-  margin-top: 7rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   padding: 5rem 2.5rem;
-
+  background-color: var(--off);
   position: relative;
   overflow: hidden;
 }

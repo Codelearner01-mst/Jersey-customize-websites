@@ -172,7 +172,8 @@ nav {
   position: relative;
   overflow: hidden;
   gap: 3rem;
-  background: url("/src/images/IMG-20260325-WA0048.jpg");
+  background: url("/src/images/view-football-player-t-shirt.jpg") center/cover
+    no-repeat;
   background-size: cover;
 }
 
@@ -262,7 +263,7 @@ h1 .line-green {
 .btn-right {
   background: var(--white);
   color: var(--text);
-  padding: 0.9rem 1.9rem;
+  padding: 0.5rem 1.2rem;
   border: 1.5px solid rgba(0, 0, 0, 0.15);
 }
 
@@ -275,7 +276,7 @@ h1 .line-green {
 .btn-left {
   background: var(--green);
   color: var(--white);
-  padding: 0.9rem 0.95rem;
+  padding: 0.5rem 0.95rem;
   border: 1.5px solid rgba(0, 0, 0, 0.15);
 }
 
@@ -300,9 +301,8 @@ h1 .line-green {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-inline: 0.8rem;
-  background: var(--white);
-  padding: 1.5rem;
+  background: var(--off);
+  padding: 0.9rem;
 }
 
 .stat-box-h {
@@ -310,6 +310,7 @@ h1 .line-green {
   border: 1px solid rgba(203, 238, 194, 0.74);
   text-align: center;
   background: var(--white);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.05);
 }
 
 .stat-box-h .n {
@@ -427,14 +428,11 @@ h1 .line-green {
 .work-item,
 .shop-item {
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  background: var(--grey);
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   aspect-ratio: 4/5;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 95%;
 }
 
@@ -449,7 +447,6 @@ h1 .line-green {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -846,10 +843,9 @@ footer {
   }
 
   .btn {
-    font-size: 0.9rem;
-
+    font-size: 0.825rem;
     letter-spacing: 0.12em;
-    min-width: 160px;
+    padding: 0.7rem 1.2rem;
   }
 
   .footer-top {
@@ -873,16 +869,16 @@ footer {
 
   .btn {
     font-size: 0.87rem;
-    padding: 0.9rem 2rem;
+    padding: 0.75rem 1.4rem;
   }
 
   .btn-right {
-    padding: 1rem 2.7rem;
+    padding: 0.75rem 1.4rem;
     box-shadow: 0 4px 12px rgba(34, 160, 80, 0.2);
   }
 
   .btn-left {
-    padding: 1rem 1.19rem;
+    padding: 0.75rem 1.19rem;
   }
 }
 
@@ -1033,7 +1029,7 @@ footer {
     aspect-ratio: 2/2;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
   }
 
   .photo-strip {
