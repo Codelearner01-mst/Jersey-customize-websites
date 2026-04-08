@@ -77,11 +77,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(-55deg,
-      transparent 0px,
-      transparent 60px,
-      rgba(34, 160, 80, 0.04) 60px,
-      rgba(34, 160, 80, 0.04) 62px);
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0px,
+    transparent 60px,
+    rgba(34, 160, 80, 0.04) 60px,
+    rgba(34, 160, 80, 0.04) 62px
+  );
   animation: shimmer 8s linear infinite;
 }
 
@@ -208,7 +210,6 @@
 .filter-bar {
   position: sticky;
   top: 66px;
-  z-index: 100;
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--light-border);
@@ -458,7 +459,8 @@
   animation: fadeUp 0.4s 0.2s ease both;
 }
 
-.lb-meta {}
+.lb-meta {
+}
 
 .lb-cat {
   font-size: 0.65rem;
