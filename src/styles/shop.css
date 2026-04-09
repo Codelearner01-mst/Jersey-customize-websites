@@ -210,6 +210,7 @@
 .filter-bar {
   position: sticky;
   top: 66px;
+  z-index: 50;
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--light-border);
@@ -341,6 +342,7 @@
   overflow: hidden;
   background: var(--grey);
   cursor: pointer;
+  aspect-ratio: 4 / 5;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
