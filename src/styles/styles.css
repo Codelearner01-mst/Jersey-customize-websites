@@ -297,7 +297,7 @@ h1 .line-green {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   background: var(--green);
   border-top: 3px solid var(--green-bright);
@@ -393,7 +393,7 @@ h1 .line-green {
 
 /* ── SHOP PREVIEW (homepage) ── */
 .home-shop {
-  padding: 5rem 6rem;
+  padding: 3rem 2rem;
   background: var(--off);
   border-top: 1px solid var(--light-border);
 }

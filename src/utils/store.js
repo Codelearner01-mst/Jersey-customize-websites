@@ -143,10 +143,4 @@ export const jerseyStore = [
     team: "other",
     image: "../images/Jersey-images/IMG-20260325-WA0037.jpg",
   },
-  {
-    id: 23,
-    league: "premier league",
-    team: "liverpool",
-    image: "../images/Jersey-images/IMG-20260325-WA0038.jpg",
-  },
 ];
