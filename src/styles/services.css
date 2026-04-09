@@ -1,51 +1,228 @@
-/* ── SERVICES ── */
+/* ── SERVICES PAGE ── */
+
+/* Hero header */
+.services-hero {
+  padding: 9rem 6rem 5rem;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  min-height: 38vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0px,
+    transparent 60px,
+    rgba(34, 160, 80, 0.04) 60px,
+    rgba(34, 160, 80, 0.04) 62px
+  );
+  pointer-events: none;
+}
+
+.services-hero-watermark {
+  position: absolute;
+  right: -1rem;
+  bottom: -2rem;
+  font-family: "Anton";
+  font-size: 22vw;
+  color: rgba(255, 255, 255, 0.025);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+.services-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.services-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin-bottom: 1rem;
+}
+
+.services-hero-tag::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--green-bright);
+  display: block;
+}
+
+.services-hero h1 {
+  font-family: "Anton";
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 0.92;
+  margin-bottom: 1.2rem;
+}
+
+.services-hero h1 em {
+  color: var(--green-bright);
+  font-style: normal;
+}
+
+.services-hero-desc {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ── SERVICES SECTION ── */
 #services {
-  margin-top: 3rem;
-  padding: 5rem 2.5rem;
-  background: var(--grey);
+  padding: 6rem 6rem;
+  background: var(--off);
   border-top: 1px solid var(--light-border);
+}
+
+.services-intro {
+  max-width: 540px;
+  margin-bottom: 3.5rem;
+}
+
+.services-intro .sec-label {
+  margin-bottom: 0.4rem;
+}
+
+.services-intro h2 {
+  margin-bottom: 0.75rem;
+}
+
+.services-intro p {
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-  background: var(--light-border);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
 .svc {
   background: var(--white);
-  padding: 2rem 1.6rem;
-  border-top: 2px solid transparent;
-  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  border-top: 3px solid transparent;
+  border-radius: 4px;
   transition:
     border-color 0.25s,
-    background 0.25s;
-  box-shadow: 2px 3px 8px rgba(5, 5, 5, 0.05);
+    transform 0.25s,
+    box-shadow 0.25s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .svc:hover {
   border-color: var(--green-bright);
-  background: #f9f9f9;
-  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+  cursor: default;
 }
 
 .svc-icon {
-  font-size: 2rem;
-  margin-bottom: 0.9rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
   display: block;
 }
 
 .svc h3 {
-  font-size: 1.25rem;
+  font-family: "Anton";
+  font-size: 1.2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
   color: var(--text);
 }
 
 .svc p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ── CTA BAND ── */
+.services-cta {
+  background: var(--green);
+  padding: 3.5rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.services-cta h2 {
+  font-family: "Anton";
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.services-cta p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.services-cta-btn {
+  background: var(--white);
+  color: var(--green);
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 2.2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.services-cta-btn:hover {
+  background: #e0ffe0;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .services-hero {
+    padding: 7rem 2rem 3.5rem;
+  }
+
+  #services {
+    padding: 4rem 2rem;
+  }
+
+  .services-cta {
+    padding: 2.5rem 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
 }
