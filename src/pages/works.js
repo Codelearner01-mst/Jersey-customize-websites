@@ -1,6 +1,5 @@
 import { toggleNav } from "../utils/navigations.js";
 import { closeNav } from "../utils/navigations.js";
-import { inject } from "@vercel/analytics";
 const navs = document.getElementById("navLinks");
 const hamburgerBtn = document.getElementById("hamburger");
 
@@ -13,4 +12,3 @@ navs.addEventListener("click", (e) => {
     closeNav(navs, hamburgerBtn);
   }
 });
-inject();
