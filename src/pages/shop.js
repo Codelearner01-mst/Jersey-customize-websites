@@ -3,6 +3,7 @@ import { closeNav } from "../utils/navigations.js";
 import { filterJerseysByLeague } from "../utils/filter.js";
 import { createJerseyItem } from "../components/jerseyItem.js";
 import { jerseyStore } from "../utils/store.js";
+import "../utils/analytics.js";
 
 const jerseyGrid = document.getElementById("shop-grid");
 const filterTabs = document.getElementById("filter-tabs");
