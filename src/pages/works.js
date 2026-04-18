@@ -1,5 +1,6 @@
 import { toggleNav } from "../utils/navigations.js";
 import { closeNav } from "../utils/navigations.js";
+import "../utils/analytics.js";
 const navs = document.getElementById("navLinks");
 const hamburgerBtn = document.getElementById("hamburger");
 
